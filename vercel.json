@@ -1,0 +1,12 @@
+{
+    "builds": [
+      {
+        "src": "path/to/your/serverless/file",
+        "use": "@vercel/python",
+        "config": {
+          "buildCommand": "apt-get update && apt-get install -y cmake && pip3 install --disable-pip-version-check --target . --upgrade -r requirements.txt"
+        }
+      }
+    ]
+  }
+  
