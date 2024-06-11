@@ -1,3 +1,5 @@
-git remote add origin https://github.com/Linuxil/faceidnazorat.git
-git branch -M main
-git push -u origin main
+git branch                   # List branches to see if 'main' exists
+git checkout -b main         # Create and switch to 'main' if it doesn't exist
+git add .                    # Stage your changes
+git commit -m "Your commit"  # Commit your changes
+git push origin main         # Push changes to remote 'main' branch

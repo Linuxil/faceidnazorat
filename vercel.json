@@ -1,15 +1,12 @@
 {
-    "builds": [{
-        "src": "faceidnazorat/wsgi.py",
+    "builds": [
+      {
+        "src": "path/to/your/serverless/file",
         "use": "@vercel/python",
-        "config": {"maxLambdaSize": "15mb", "runtime": "python3.10"}    }
-
-    ],
-
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "faceidnazorat/wsgi.py"
+        "config": {
+          "buildCommand": "apt-get update && apt-get install -y cmake && pip3 install --disable-pip-version-check --target . --upgrade -r requirements.txt"
         }
+      }
     ]
-}
+  }
+  
