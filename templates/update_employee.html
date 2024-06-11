@@ -1,0 +1,55 @@
+{% extends 'wrapper.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <style>
+        #id_name {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            color: white;
+
+        }
+        #id_surname {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            color: white;
+
+        }
+        #id_position {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            background-color: #191C24;
+            color: white;
+
+        }
+        #id_phone {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            color: white;
+
+        }
+        #id_tg_id {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            color: white;
+
+        }
+    </style>
+        <!-- Content Start -->
+        <div class="content">
+            <div class="forform" style="width: 95%;   background-color: #191C24; margin: 50px auto; box-sizing: border-box; padding: 50px;">
+                {% load crispy_forms_tags %}
+            <form action="" method="post" style="width: 50%; margin: 50px auto;  padding: 20px; box-sizing: border-box;color: white;" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                {{ form|crispy}}
+                
+                <button class="btn btn-success" type="submit">
+                    Submit
+                </button>
+            </form>
+           
+        </div>
+
+
+            
+{% endblock content %}
