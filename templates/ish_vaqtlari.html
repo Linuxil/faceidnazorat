@@ -1,0 +1,19 @@
+{% extends 'wrapper.html' %}
+
+{% block content %}
+<div class="row ">
+  <div class="col-12 grid-margin">
+   
+    </div>
+  </div>
+
+<script>
+document.getElementById('check-all').addEventListener('change', function() {
+    var checkboxes = document.querySelectorAll('.checkbox-item');
+    checkboxes.forEach(function(checkbox) {
+        checkbox.checked = this.checked;
+    }, this);
+});
+</script>
+
+{% endblock content %}

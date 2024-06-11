@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import HomeView,LoginView,LogoutView, EmployeeDetailView,AddEmployeeView,delete_employee,mobile,capture_view,kelish_ketish,capture_view_ketish,nazorat_mobile,nazorat_jadvali_date,EditProfilView,AdminProfilView
+from .views import HomeView,LoginView,LogoutView, EmployeeDetailView,AddEmployeeView,delete_employee,mobile,capture_view,kelish_ketish,capture_view_ketish,nazorat_mobile,nazorat_jadvali_date,EditProfilView,AdminProfilView,ish_vaqtlari
 
 urlpatterns = [
     path('',HomeView.as_view(), name="home"),
@@ -7,6 +7,8 @@ urlpatterns = [
     path('login/',LoginView.as_view(), name="login"),
     path('logout/',LogoutView.as_view(), name="logout"),
     path('admin_settings/<int:pk>/', AdminProfilView.as_view(), name='admin_settings'),
+    path('ish_vaqtlari/', ish_vaqtlari , name='ish_vaqtlari'),
+
 
     # path('admin_settings/',AdminSettingsView.as_view(),name='admin_settings'),
     path('employee_detail/<int:pk>',EmployeeDetailView.as_view(),name='employee_detail'),

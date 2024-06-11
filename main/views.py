@@ -73,6 +73,8 @@ class LoginView(View):
         context = {"message":message}
         return render(request,'login2.html',context)
     
+def ish_vaqtlari(request):
+    return render(request,'ish_vaqtlari.html')
 
 @csrf_exempt
 def capture_view(request):
